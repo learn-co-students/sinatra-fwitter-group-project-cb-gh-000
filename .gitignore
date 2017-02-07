@@ -102,3 +102,4 @@ build-iPhoneSimulator/
 .rvmrc
 
 .learn
+vendor/
