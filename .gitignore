@@ -103,3 +103,4 @@ build-iPhoneSimulator/
 
 .learn
 vendor/
+*.sqlite
