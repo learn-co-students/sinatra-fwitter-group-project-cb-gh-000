@@ -1,0 +1,8 @@
+<% if logged_in? %>
+    <h1>Create Tweet</h1>
+
+    <form action="/tweets" method="post">
+      <input type="text" id="content" name="content" required>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+<% end %>

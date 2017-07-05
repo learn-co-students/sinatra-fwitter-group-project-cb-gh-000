@@ -1,0 +1,7 @@
+<% if logged_in? %>
+    <form action="/tweets/<%= @tweet.id %>" method="post">
+      <input type="hidden" id="hidden" name="_method" value="patch">
+      <input type="text" id="content" name="content" value="<%= @tweet.content %>" required>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+<% end %>
