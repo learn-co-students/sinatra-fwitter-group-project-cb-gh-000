@@ -15,15 +15,23 @@ class ApplicationController < Sinatra::Base
   use Rack::Flash
 
   get '/' do
-    erb :index
+    if logged_in?
+      redirect to '/tweets'
+    else
+      erb :index
+    end
   end
 
   get '/signup' do
-    erb :'users/create_user' unless logged_in?
+    if logged_in?
+      redirect to '/tweets'
+    else
+      erb :'users/create_user'
+    end
   end
 
   post '/signup' do
-    new_user = User.new(params[:new_user])
+    new_user = User.new(username: params[:username], email: params[:email], password: params[:password])
 
     if new_user.save
       session[:user_id] = new_user.id

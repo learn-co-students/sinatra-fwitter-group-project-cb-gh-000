@@ -66,3 +66,20 @@ nav a:hover {
 #signup button {
     font-size: 20px;
 }
+
+/************* Login *****************/
+
+#login {
+    margin: 50px auto 100px auto;
+    text-align: right;
+    width: 350px;
+    font-size: 20px;
+}
+
+#login input{
+    margin-bottom: 30px;
+}
+
+#login button {
+    font-size: 20px;
+}

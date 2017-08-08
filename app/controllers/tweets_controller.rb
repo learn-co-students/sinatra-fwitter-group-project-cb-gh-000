@@ -1,6 +1,10 @@
 class TweetsController < ApplicationController
 
   get '/tweets' do
-    "Tweets with id #{logged_in?}"
+    if logged_in?
+      erb :'tweets/tweets'
+    else
+      redirect to '/'
+    end
   end
 end
