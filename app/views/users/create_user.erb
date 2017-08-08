@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>SignUp Fwitter</h1>
+  <form action="/signup" method="post" id="signup">
+    <label for="username">Enter Username: </label>
+    <input type="text" name="new_user[username]" id="username" autofocus><br>
+
+    <label for="email">Enter Email: </label>
+    <input type="email" name="new_user[email]" id="email"><br>
+
+    <label for="password">Enter Password: </label>
+    <input type="password" name="new_user[password]" id="password"><br>
+
+    <button type="submit">SignUp</button>
+  </form>
+  <p id="error">
+    <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+    <% end %>
+  </p>
+</div>
