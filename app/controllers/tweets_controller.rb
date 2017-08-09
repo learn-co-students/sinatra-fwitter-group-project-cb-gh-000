@@ -60,4 +60,15 @@ class TweetsController < ApplicationController
       redirect to "/tweets/#{params[:id]}/edit"
     end
   end
+
+  delete '/tweets/:id' do
+    @tweet = Tweet.find_by_id(params[:id])
+    @user = current_user
+    if @user.id == @tweet.user_id
+      @tweet.destroy
+      redirect to '/tweets'
+    else
+      redirect to '/tweets'
+    end
+  end
 end
