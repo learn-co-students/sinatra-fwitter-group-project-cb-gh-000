@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Currently Viewing, <%= @user.username %></h1>
+
+  <ul id="tweets">
+    <% @user.tweets.each.with_index(1) do |tweet, index| %>
+    <li><%= index %>: <%= tweet.content %></li>
+    <% end %>
+  </ul>
+
+</div>

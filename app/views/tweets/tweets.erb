@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Welcome, <%= @user.username %></h1>
+  <nav class="clearfix">
+    <a href="/tweets">Tweets</a>
+    <a href="/tweets/new">New Tweet</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <ul id="tweets">
+    <% Tweet.all.each.with_index(1) do |tweet, index| %>
+        <li><a href="/tweets/<%= tweet.id %>"><%= index %>: <%= tweet.content %> (user: <%= tweet.user.username %>)</a></li>
+    <% end %>
+  </ul>
+</div>

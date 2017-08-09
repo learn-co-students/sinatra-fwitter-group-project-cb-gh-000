@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Tweet by <%= @tweet.user.username %></h1>
+  <nav class="clearfix">
+    <a href="/tweets">Tweets</a>
+    <a href="/tweets/new">New Tweet</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+
+  <div id="single_tweet">
+    <%= @tweet.content %><br><br>
+    <a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a><br><br>
+    <form action="/tweets/<%= @tweet.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" id="submit">Delete Tweet</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Create Tweet, <%= @user.username %></h1>
+  <nav class="clearfix">
+    <a href="/tweets">Tweets</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <form action="/tweets" method="post" id="new_tweet">
+    <label for="content">Enter Tweet Content: </label>
+    <input type="text" name="content" id="content"><br>
+    <button type="submit" id="submit">Create Tweet</button>
+  </form>
+
+  <p id="error">
+    <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+    <% end %>
+  </p>
+</div>
