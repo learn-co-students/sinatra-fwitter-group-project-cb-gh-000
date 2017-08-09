@@ -59,6 +59,22 @@ nav a:hover {
 }
 
 
+#new_tweet {
+    margin: 50px auto 100px auto;
+    text-align: right;
+    width: 450px;
+    font-size: 20px;
+}
+
+#new_tweet input{
+    margin-bottom: 30px;
+}
+
+#new_tweet button {
+    font-size: 20px;
+}
+
+
 /************* SignUp *****************/
 
 #signup {
