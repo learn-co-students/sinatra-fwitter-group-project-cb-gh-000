@@ -58,6 +58,15 @@ nav a:hover {
     text-align: center;
 }
 
+#tweets li a {
+    text-decoration: none;
+    color: black;
+}
+
+#tweets li a:hover {
+    color: #1c94e0;
+}
+
 
 #new_tweet {
     margin: 50px auto 100px auto;
@@ -74,6 +83,10 @@ nav a:hover {
     font-size: 20px;
 }
 
+#single_tweet {
+    margin-top: 20px;
+    font-size: 24px;
+}
 
 /************* SignUp *****************/
 
