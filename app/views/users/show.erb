@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Currently Viewing, <%= @user.username %></h1>
+
+  <nav class="clearfix">
+    <a href="/tweets">Tweets</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <ul id="tweets">
+    <% @user.tweets.each.with_index(1) do |tweet, index| %>
+    <li><%= index %>: <%= tweet.content %></li>
+    <% end %>
+  </ul>
+
+</div>

@@ -47,7 +47,16 @@ nav a:hover {
     text-align: center;
 }
 
-/************* Index *****************/
+#tweets {
+    margin-top: 50px;
+}
+
+#tweets li {
+    list-style-type: none;
+    display: block;
+    padding: 0 0 40px 0;
+    text-align: center;
+}
 
 
 /************* SignUp *****************/

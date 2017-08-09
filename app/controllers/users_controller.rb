@@ -17,4 +17,13 @@ class UsersController < ApplicationController
       redirect to '/login'
     end
   end
+
+  get '/users/:slug' do
+    if logged_in?
+      @user = User.find_by_slug(params[:slug])
+      erb :'users/show'
+    else
+      redirect to '/login'
+    end
+  end
 end
