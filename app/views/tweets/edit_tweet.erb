@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Edit Tweet by <%= @tweet.user.username %></h1>
+  <nav class="clearfix">
+    <a href="/tweets">Tweets</a>
+    <a href="/tweets/new">New Tweet</a>
+    <a href="/logout">Logout</a>
+  </nav>
+  <div id="single_tweet">
+    <%= @tweet.content %>
+  </div>
+  <form action="/tweets/<%= @tweet.id %>" method="post" id="edit_tweet">
+    <input type="hidden" name="_method" value="patch">
+    New Content For Tweet: <input type="text" name="content" id="content"><br>
+    <button type="submit" id="submit">Edit Tweet</button>
+  </form>
+
+  <p id="error">
+    <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+    <% end %>
+  </p>
+</div>

@@ -83,6 +83,21 @@ nav a:hover {
     font-size: 20px;
 }
 
+#edit_tweet {
+    margin: 50px auto 100px auto;
+    text-align: right;
+    width: 450px;
+    font-size: 20px;
+}
+
+#edit_tweet input{
+    margin-bottom: 30px;
+}
+
+#edit_tweet button {
+    font-size: 20px;
+}
+
 #single_tweet {
     margin-top: 20px;
     font-size: 24px;
