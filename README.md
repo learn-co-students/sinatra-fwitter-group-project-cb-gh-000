@@ -15,7 +15,7 @@
 The goal of this project is to build Fwitter (aka Flatiron Twitter).
 
 You'll be implementing Fwitter using multiple objects that interact, including separate classes for User and Tweet.
- 
+
 Just like with Twitter, a user should not be able to take any actions (except sign-up), unless they are logged in. Once a user is logged in, they should be able to create, edit and delete their own tweets, as well as view all the tweets.
 
 There are controller tests to make sure that you build the appropriate controller actions that map to the correct routes.
@@ -23,8 +23,8 @@ There are controller tests to make sure that you build the appropriate controlle
 ## Group Project Instructions
 
 *Instructions for how to work on a Group Project with Learn*
-
-### Some Hints on Working Together 
+aaa
+### Some Hints on Working Together
 
 Working on a software project with another person is not something to be taken lightly. While you are a fantastic coder solo, software development is a collaborative activity. Just like anything else, there is skill in collaborating on code. In the end, collaborating with another person boils down to three different styles:
 
