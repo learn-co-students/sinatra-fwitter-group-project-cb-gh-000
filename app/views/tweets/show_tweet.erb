@@ -1,6 +1,6 @@
 <h4> <%= @tweet.content %> </h4><br />
 
-<% if session[:user_id] == @tweet.user_id %>
+<% if Helpers.current_user(session).id == @tweet.user_id %>
 <a href="/tweets/<%=@tweet.id%>/edit"> Edit Tweet </a><br />
 <form method="post" action="/tweets/<%=@tweet.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="delete">
