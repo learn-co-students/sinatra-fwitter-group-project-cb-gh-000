@@ -1,0 +1,11 @@
+<h1>Welcome to Fwitter !</h1>
+<p> Please click one of the following links </p>
+
+<% if !Helpers.is_logged_in?(session) %>
+<a href="/login">Login</a> <br />
+<a href="/signup">Sign-up</a>
+<% else %>
+<a href="/tweets">View Tweets</a>
+<a href="/tweets/new">New Tweet</a>
+<a href="/show">Go to Profile</a>
+<% end %>

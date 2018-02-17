@@ -1,0 +1,13 @@
+<h4> <%= @tweet.content %> </h4><br />
+
+<% if session[:user_id] == @tweet.user_id %>
+<a href="/tweets/<%=@tweet.id%>/edit"> Edit Tweet </a><br />
+<form method="post" action="/tweets/<%=@tweet.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+<form>
+<a href="/tweets">Go Back</a>
+
+<% else %>
+<a href="/tweets">Go Back</a>
+<% end %>
