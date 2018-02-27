@@ -1,0 +1,8 @@
+<H2>All Tweets</H2>
+<% @tweets.each do |tweet| %>
+<%= tweet.content %><br />
+by: <%= tweet.user_id %> <br />
+<a href="/tweets/<%=tweet.id%>">View Tweet</a>
+<h6>------------</h6>
+<% end %>
+<a href="/tweets/new">New Tweet</a>
