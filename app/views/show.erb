@@ -1,0 +1,6 @@
+<%= @user.username %>
+<%= @user.email %>
+
+<% @user.tweets.each do |x| %>
+<li><%= x.content %></li>
+<% end %>
