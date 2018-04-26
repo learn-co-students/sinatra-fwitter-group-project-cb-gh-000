@@ -22,7 +22,7 @@ There are controller tests to make sure that you build the appropriate controlle
 
 ## Group Project Instructions
 
-*Instructions for how to work on a Group Project with Learn*
+*Instructions for how to work on a Group Project with Learn* 
 
 ### Some Hints on Working Together 
 
