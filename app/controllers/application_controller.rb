@@ -9,9 +9,14 @@ class ApplicationController < Sinatra::Base
     set :session_secret, 'secret'
   end
 
-  # get '/' do
-  #   'Welcome to Fwitter'
-  # end
+  get '/spec' do
+    erb :spec
+  end
+
+  #Helper Methods
+  def logged_in?
+    !!session[:user_id]
+  end
 
 
 

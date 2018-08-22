@@ -6,5 +6,13 @@
   </head>
   <body>
     <h1>Welcome, <%= @user.username %></h1>
+
+    <ul>
+        <% Tweet.all.each do |tweet| %>
+          <li>
+            <%= tweet.content %>
+          </li>
+        <% end %>
+    </ul>
   </body>
 </html>
