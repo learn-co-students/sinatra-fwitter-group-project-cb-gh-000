@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tweets Index</title>
+  </head>
+  <body>
+    <h1>Welcome, <%= @user.username %></h1>
+
+    <ul>
+        <% Tweet.all.each do |tweet| %>
+          <li>
+            <%= tweet.content %>
+          </li>
+        <% end %>
+    </ul>
+  </body>
+</html>
