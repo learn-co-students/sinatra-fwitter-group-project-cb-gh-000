@@ -46,13 +46,19 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id/edit' do
-
+    @tweet = Tweet.find_by_id(params[:id])
+    if @tweet.user_id == session[:user_id] && params[:content] != ""
+      @tweet.content = params[:content]
+      @tweet.save
+    end
   end
 
   delete '/tweets/:id/delete' do
     @tweet = Tweet.find_by_id(params[:id])
-    @tweet.delete
-    redirect '/tweets'
+    if logged_in? && @tweet.user_id == session[:user_id]
+      @tweet.delete
+      redirect '/tweets'
+    end
   end
 
 end
